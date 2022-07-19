@@ -254,7 +254,7 @@ try:
             writer = csv.writer(csvfile)
             writer.writerow(['Branch Name', 'University_roll_no' ,'Student Name','Fathers name','Result' , 'SGPA', 'Credit Earned', 'Total Credit'])
             for urn in urns:
-                writer.writerow([dictBranch[urn], urn ,dictStudentName[urn],dict,dictResult[urn].values(),round(dictSgpa[urn], 2), dictTotalCreditearned[urn], dictTotalCredit[urn]])
+                writer.writerow([dictBranch[urn], urn ,dictStudentName[urn],dictFatherName[urn],dictResult[urn].values(),round(dictSgpa[urn], 2), dictTotalCreditearned[urn], dictTotalCredit[urn]])
 except Error as e:
     print("Error while connecting to MySQL", e)
 finally:
